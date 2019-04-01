@@ -10,9 +10,12 @@
 
 Key: <input type="number" id="key" value="Enter number">
 
-<button onclick = "document.getElementById('answer').innerHTML = linSearch(test,Number(document.getElementById('key').value))">Find Key</button>
+<!--<button onclick = "document.getElementById('answer').innerHTML = linSearch(test,Number(document.getElementById('key').value))">Find Key</button>
+-->
+<!--<p id = "answer">Enter key</p>-->
 
-<p id = "answer">Enter key</p>
+<button onclick = "alert(linSearch(test,Number(document.getElementById('key').value)))">Find Key</button>
+
 
 <script>
 function linSearch(arr,key)
@@ -27,31 +30,22 @@ function linSearch(arr,key)
 			break;
 		}
 	}
-
 	return flag;
 }
-
 var test = null;
-
 function createList(list_string)
 {
 	var list_val = list_string.split(" ");
 	var i;
-
-
 	test = list_val.map(Number);
-
 	//document.body.innerHTML = "";
 	document.getElementById('list').value = "";
 	document.getElementById('key').value ="";
-
 }
-
-
 //document.write(test);
 document.write("\n");
 //var ans = linSearch(test,5);
-document.write(ans);
+//document.write(ans);
 </script>
 
 
