@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Linear search using Javascript</title>
+</head>
+<body background="">
+Enter array elements: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="array"><br><br>
+Enter the value to be searched(Key): <input type="text" name="key" size="11">
+<br><br>
+<button name="search">Search</button>
+</body>
+<style type="text/css">
+	body{
+		background-color: teal;
+		font-family: Arial, Helvetica, sans-serif;
+
+	}
+</style>
+<script type="text/javascript">
+	var x=document.getElementsByName('search')[0];
+	x.onclick=function linearSearch() {
+		var eleString=document.getElementsByName('array')[0].value;
+		var kkey=document.getElementsByName('key')[0].value;
+		if(kkey=='')
+		{
+			alert("Please enter the value");
+		}
+		else
+		{
+			var test=0;
+			var finalArr=eleString.split(" ");
+			for (var i = 0; i < finalArr.length - 1; i++) {
+				if(finalArr[i]===kkey)
+					{
+						test=1;
+						alert("Element found at index: "+ i);
+						break;
+					}
+			}
+			if(test===0)
+			{
+				alert("Element not found!");
+			}
+		}
+	}
+</script>
+</html>
