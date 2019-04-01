@@ -1,0 +1,58 @@
+<html>
+<H1>Linear Search</H1>
+
+<p>The list:</p>
+<input type="text" id = "list" value="Enter numbers with spaces" onclick="document.getElementById('list').value = ''">
+
+<button onclick = "createList(document.getElementById('list').value)">Create List</button>
+
+<p> </p>
+
+Key: <input type="number" id="key" value="Enter number">
+
+<button onclick = "document.getElementById('answer').innerHTML = linSearch(test,Number(document.getElementById('key').value))">Find Key</button>
+
+<p id = "answer">Enter key</p>
+
+<script>
+function linSearch(arr,key)
+{
+	var flag = "Key not found";
+	var i;
+	for(i =0; i < arr.length ; i++)
+	{
+		if(arr[i] == key)
+		{
+			flag = "Key found at index " + (i+1);
+			break;
+		}
+	}
+
+	return flag;
+}
+
+var test = null;
+
+function createList(list_string)
+{
+	var list_val = list_string.split(" ");
+	var i;
+
+
+	test = list_val.map(Number);
+
+	//document.body.innerHTML = "";
+	document.getElementById('list').value = "";
+	document.getElementById('key').value ="";
+
+}
+
+
+//document.write(test);
+document.write("\n");
+//var ans = linSearch(test,5);
+document.write(ans);
+</script>
+
+
+</html>
